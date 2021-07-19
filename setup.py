@@ -11,8 +11,7 @@
 #    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #    See the License for the specific language governing permissions and
 #    limitations under the License.
-#
-# ================================================================================================
+
 import os
 import sys
 
@@ -38,7 +37,7 @@ packages = ['dwave_networkx',
 
 install_requires = ['networkx>=2.0,<3.0',
                     'decorator>=4.1.0,<5.0.0',
-                    'dimod>=0.8.0',
+                    'dimod[preprocessing]>=0.8.0',
                     ]
 
 setup(

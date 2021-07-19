@@ -124,7 +124,7 @@ class TestTSPQUBO(unittest.TestCase):
 
         # all possible routes are equally good
         for route in min_routes:
-            sample = {v: 0 for v in bqm}
+            sample = {v: 0 for v in bqm.variables}
             for idx, city in enumerate(route):
                 sample[(city, idx)] = 1
             self.assertAlmostEqual(bqm.energy(sample), ground_energy)
@@ -156,7 +156,7 @@ class TestTSPQUBO(unittest.TestCase):
 
         # all possible routes are equally good
         for route in min_routes:
-            sample = {v: 0 for v in bqm}
+            sample = {v: 0 for v in bqm.variables}
             for idx, city in enumerate(route):
                 sample[(city, idx)] = 1
             self.assertAlmostEqual(bqm.energy(sample), ground_energy)
@@ -199,7 +199,7 @@ class TestTSPQUBO(unittest.TestCase):
 
         # all possible routes are equally good
         for route in min_routes:
-            sample = {v: 0 for v in bqm}
+            sample = {v: 0 for v in bqm.variables}
             for idx, city in enumerate(route):
                 sample[(city, idx)] = 1
             self.assertAlmostEqual(bqm.energy(sample), ground_energy)
